@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'Listy'|trans }}
+{% endblock %}
+
+{% block body %}
+    <h1>{{ 'Listy'|trans }}</h1>
+    {% if pagination is defined and pagination.items|length %}
+        <div class="centered-container">
+                <a class="create" href="{{ url('lista_create') }}" title="{{ 'action.add'|trans }}">
+                    {{ 'Stwórz nową listę'|trans }}
+                </a>
+        </div>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>{{ knp_pagination_sortable(pagination, 'Identyfikator'|trans, 'lista.id') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'Data utworzenia'|trans, 'lista.createdAt') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'Ostatnia aktualizacja'|trans, 'lista.updatedAt') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'Nazwa'|trans, 'lista.title') }}</th>
+                <th>{{ 'Podgląd'|trans }}</th>
+                <th>{{ 'Edytuj'|trans }}</th>
+                <th>{{ 'Usuń'|trans }}</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for lista in pagination.items %}
+                <tr>
+                    <td>{{ lista.id }}</td>
+                    <td>{{ lista.createdAt|format_date('long') }}</td>
+                    <td>{{ lista.updatedAt|format_date('long') }}</td>
+                    <td>
+                        <a href="{{ path('task_index', {listaId: lista.id}) }}">
+                            {{ lista.title }}
+                        </a>
+                    </td>
+                    <td>
+                        <a href="{{ url('lista_view', {id: lista.id}) }}" title="{{ 'action.view'|trans }}">
+                            {{ 'action.view'|trans }}
+                        </a>
+                    </td>
+                    <td>
+                        <a href="{{ url('lista_edit', {id: lista.id}) }}" title="{{ 'action.edit'|trans }}">
+                            {{ 'Edytuj'|trans }}
+                        </a>
+                    </td>
+                    <td>
+                        <a href="{{ url('lista_delete', {id: lista.id}) }}" title="{{ 'action.delete'|trans }}">
+                            {{ 'Usuń'|trans }}
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <div class="centered-container">
+            <a class="create" href="{{ url('home_index') }}" title="{{ 'action.back_to_list'|trans }}">
+                {{ 'Strona główna'|trans }}
+            </a>
+        </div>
+        <div class="navigation">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+    {% else %}
+        <p>
+            {{ 'message.empty_list'|trans }}
+        </p>
+    {% endif %}
+{% endblock %}

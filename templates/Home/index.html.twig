@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Strona Główna{% endblock %}
+
+{% block body %}
+    <div class="Main">
+        <h1>Aplikacja do zarządzania zadaniami</h1>
+        <div class = "Panel sterowania">
+            <a class = "Button" href="{{ url('task_index') }}">
+                <button>Zarządzaj Zadaniami</button>
+            </a>
+
+            <a class = "Button" href="{{ url('category_index') }}">
+                <button>Zarządzaj Kategoriami</button>
+            </a>
+
+            <a class = "Button" href="{{ url('lista_index') }}">
+                <button>Zarządzaj Listami</button>
+            </a>
+        </div>
+    </div>
+{% endblock %}

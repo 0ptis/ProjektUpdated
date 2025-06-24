@@ -1,0 +1,243 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="label.actions">
+                <source>label.actions</source>
+                <target>Actions</target>
+            </trans-unit>
+            <trans-unit id="label.id">
+                <source>label.id</source>
+                <target>Id</target>
+            </trans-unit>
+            <trans-unit id="label.title">
+                <source>label.title</source>
+                <target>Title</target>
+            </trans-unit>
+            <trans-unit id="label.content">
+                <source>label.content</source>
+                <target>Content</target>
+            </trans-unit>
+            <trans-unit id="label.tags">
+                <source>label.tags</source>
+                <target>Tags</target>
+            </trans-unit>
+            <trans-unit id="message.empty_list">
+                <source>message.empty_list</source>
+                <target>List is empty.</target>
+            </trans-unit>
+            <trans-unit id="message.record_not_found">
+                <source>message.record_not_found</source>
+                <target>Record not found.</target>
+            </trans-unit>
+            <trans-unit id="title.record_list">
+                <source>title.record_list</source>
+                <target>Records list</target>
+            </trans-unit>
+            <trans-unit id="title.record_view">
+                <source>title.record_view</source>
+                <target>Record view #%id%</target>
+            </trans-unit>
+
+            <trans-unit id="message.created_successfully">
+                <source>message.created_successfully</source>
+                <target>Created successfully</target>
+            </trans-unit>
+            <trans-unit id="message.edited_successfully">
+                <source>message.edited_successfully</source>
+                <target>Edited successfully</target>
+            </trans-unit>
+            <trans-unit id="message.category_contains_tasks">
+                <source>message.category_contains_tasks</source>
+                <target>Category contains tasks.</target>
+            </trans-unit>
+            <trans-unit id="message.deleted_successfully">
+                <source>message.deleted_successfully</source>
+                <target>Deleted successfully</target>
+            </trans-unit>
+            <trans-unit id="title.category_create">
+                <source>title.category_create</source>
+                <target>Create category</target>
+            </trans-unit>
+            <trans-unit id="action.save">
+                <source>action.save</source>
+                <target>Save</target>
+            </trans-unit>
+            <trans-unit id="action.back_to_list">
+                <source>action.back_to_list</source>
+                <target>Back to list</target>
+            </trans-unit>
+            <trans-unit id="title.category_delete">
+                <source>title.category_delete</source>
+                <target>Delete category</target>
+            </trans-unit>
+            <trans-unit id="action.delete">
+                <source>action.delete</source>
+                <target>Delete</target>
+            </trans-unit>
+            <trans-unit id="title.category_edit">
+                <source>title.category_edit</source>
+                <target>Edit category</target>
+            </trans-unit>
+            <trans-unit id="action.add">
+                <source>action.add</source>
+                <target>Add</target>
+            </trans-unit>
+            <trans-unit id="action.view">
+                <source>action.view</source>
+                <target>View</target>
+            </trans-unit>
+            <trans-unit id="action.edit">
+                <source>action.edit</source>
+                <target>Edit</target>
+            </trans-unit>
+            <trans-unit id="title.category_details">
+                <source>title.category_details</source>
+                <target>Category details</target>
+            </trans-unit>
+            <trans-unit id="label.created_at">
+                <source>label.created_at</source>
+                <target>Created at</target>
+            </trans-unit>
+            <trans-unit id="label.updated_at">
+                <source>label.updated_at</source>
+                <target>Updated at</target>
+            </trans-unit>
+            <trans-unit id="title.lista_create">
+                <source>title.lista_create</source>
+                <target>Create list</target>
+            </trans-unit>
+            <trans-unit id="title.lista_delete">
+                <source>title.lista_delete</source>
+                <target>Delete list</target>
+            </trans-unit>
+            <trans-unit id="title.lista_edit">
+                <source>title.lista_edit</source>
+                <target>Edit list</target>
+            </trans-unit>
+            <trans-unit id="title.lista_details">
+                <source>title.lista_details</source>
+                <target>List details</target>
+            </trans-unit>
+            <trans-unit id="title.task_create">
+                <source>title.task_create</source>
+                <target>Create task</target>
+            </trans-unit>
+            <trans-unit id="title.task_delete">
+                <source>title.task_delete</source>
+                <target>Delete task</target>
+            </trans-unit>
+            <trans-unit id="title.task_edit">
+                <source>title.task_edit</source>
+                <target>Edit task</target>
+            </trans-unit>
+            <trans-unit id="title.task_list">
+                <source>title.task_list</source>
+                <target>Task list</target>
+            </trans-unit>
+            <trans-unit id="title.task_details">
+                <source>title.task_details</source>
+                <target>Task details</target>
+            </trans-unit>
+            <trans-unit id="label.category">
+                <source>label.category</source>
+                <target>Category</target>
+            </trans-unit>
+            <trans-unit id="label.comment">
+                <source>label.comment</source>
+                <target>Comment</target>
+            </trans-unit>
+            <trans-unit id="label.user.author">
+                <source>label.user.author</source>
+                <target>Author</target>
+            </trans-unit>
+
+            <!-- Dodatkowe polskie frazy z tłumaczeniem -->
+
+            <trans-unit id="Wyloguj">
+                <source>Wyloguj</source>
+                <target>Log out</target>
+            </trans-unit>
+            <trans-unit id="Edytuj dane">
+                <source>Edytuj dane</source>
+                <target>Edit data</target>
+            </trans-unit>
+            <trans-unit id="Powrót">
+                <source>Powrót</source>
+                <target>Back</target>
+            </trans-unit>
+            <trans-unit id="Kategorie">
+                <source>Kategorie</source>
+                <target>Categories</target>
+            </trans-unit>
+            <trans-unit id="Stwórz nową kategorię">
+                <source>Stwórz nową kategorię</source>
+                <target>Create new category</target>
+            </trans-unit>
+            <trans-unit id="Identyfikator">
+                <source>Identyfikator</source>
+                <target>Identifier</target>
+            </trans-unit>
+            <trans-unit id="Data utworzenia">
+                <source>Data utworzenia</source>
+                <target>Created at</target>
+            </trans-unit>
+            <trans-unit id="Ostatnia aktualizacja">
+                <source>Ostatnia aktualizacja</source>
+                <target>Last update</target>
+            </trans-unit>
+            <trans-unit id="Nazwa">
+                <source>Nazwa</source>
+                <target>Name</target>
+            </trans-unit>
+            <trans-unit id="Podgląd">
+                <source>Podgląd</source>
+                <target>Preview</target>
+            </trans-unit>
+            <trans-unit id="Edytuj">
+                <source>Edytuj</source>
+                <target>Edit</target>
+            </trans-unit>
+            <trans-unit id="Usuń">
+                <source>Usuń</source>
+                <target>Delete</target>
+            </trans-unit>
+            <trans-unit id="Strona główna">
+                <source>Strona główna</source>
+                <target>Home</target>
+            </trans-unit>
+            <trans-unit id="Listy">
+                <source>Listy</source>
+                <target>Lists</target>
+            </trans-unit>
+            <trans-unit id="Stwórz nową listę">
+                <source>Stwórz nową listę</source>
+                <target>Create new list</target>
+            </trans-unit>
+            <trans-unit id="Lista">
+                <source>Lista</source>
+                <target>List</target>
+            </trans-unit>
+            <trans-unit id="Wyświetl">
+                <source>Wyświetl</source>
+                <target>Show</target>
+            </trans-unit>
+            <trans-unit id="Lista zadań ogólna">
+                <source>Lista zadań ogólna</source>
+                <target>General task list</target>
+            </trans-unit>
+            <trans-unit id="Dodaj nowe zadanie">
+                <source>Dodaj nowe zadanie</source>
+                <target>Add new task</target>
+            </trans-unit>
+            <trans-unit id="Kategoria">
+                <source>Kategoria</source>
+                <target>Category</target>
+            </trans-unit>
+            <trans-unit id="message.lista_contains_tasks">
+                <source>message.lista_contains_tasks</source>
+                <target>The list contains tasks.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
