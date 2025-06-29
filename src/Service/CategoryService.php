@@ -7,7 +7,7 @@
 namespace App\Service;
 
 use App\Entity\Category;
-use App\Repository\TaskRepository;
+use App\Repository\NoteRepository;
 use App\Repository\CategoryRepository;
 use Doctrine\ORM\NonUniqueResultException;
 use Doctrine\ORM\NoResultException;
@@ -35,9 +35,9 @@ class CategoryService implements CategoryServiceInterface
      *
      * @param CategoryRepository $categoryRepository Category repository
      * @param PaginatorInterface $paginator          Paginator
-     * @param TaskRepository     $taskRepository     Task repository
+     * @param NoteRepository     $noteRepository     Note repository
      */
-    public function __construct(private readonly CategoryRepository $categoryRepository, private readonly PaginatorInterface $paginator, private readonly TaskRepository $taskRepository)
+    public function __construct(private readonly CategoryRepository $categoryRepository, private readonly PaginatorInterface $paginator, private readonly NoteRepository $noteRepository)
     {
     }
 
@@ -95,9 +95,8 @@ class CategoryService implements CategoryServiceInterface
      */
     public function canBeDeleted(Category $category): bool
     {
-
         try {
-            $result = $this->taskRepository->countByCategory($category);
+            $result = $this->noteRepository->countByCategory($category);
 
             return !($result > 0);
         } catch (NoResultException|NonUniqueResultException) {
