@@ -46,7 +46,6 @@ class Task
     private ?\DateTimeImmutable $updatedAt;
 
     #[ORM\Column(length: 255)]
-    #[Assert\NotBlank]
     #[Assert\Type('string')]
     #[Assert\Length(max: 255)]
     private ?string $comment = null;
@@ -59,7 +58,6 @@ class Task
 
     #[ORM\ManyToOne(targetEntity: User::class, fetch: 'EXTRA_LAZY')]
     #[ORM\JoinColumn(nullable: false)]
-    #[Assert\NotNull]
     #[Assert\Type(User::class)]
     private ?User $author;
 

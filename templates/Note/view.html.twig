@@ -10,17 +10,23 @@
         <dl class="dl-horizontal task-details">
             <dt>{{ 'label.id'|trans }}</dt>
             <dd>{{ note.id }}</dd>
+
             <dt>{{ 'label.created_at'|trans }}</dt>
             <dd>{{ note.createdAt|format_date('long') }}</dd>
+
             <dt>{{ 'label.updated_at'|trans }}</dt>
             <dd>{{ note.updatedAt|format_date('long') }}</dd>
+
             <dt>{{ 'label.title'|trans }}</dt>
             <dd>{{ note.title }}</dd>
+
             <dt>{{ 'label.comment'|trans }}</dt>
-            <dd>{{ note.comment }}</dd>
+            <dd class="textarea-wrap">{{ note.comment|nl2br|raw }}</dd>
+
             <dt>{{ 'label.user.author'|trans }}</dt>
             <dd>{{ note.author.email }}</dd>
         </dl>
+
         <div class="centered-container">
             <a class="create" href="{{ url('note_index') }}" title="{{ 'action.back_to_list'|trans }}">
                 {{ 'Powrót'|trans }}

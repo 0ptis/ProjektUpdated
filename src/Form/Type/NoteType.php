@@ -10,6 +10,7 @@ use App\Entity\Category;
 use App\Entity\Note;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -30,15 +31,18 @@ class NoteType extends AbstractType
         $builder->add('title', TextType::class, [
             'label' => 'label.title',
             'required' => true,
-            'attr' => ['max_length' => 255],
+            'attr' => ['max_length' => 1500],
         ]);
 
-        $builder->add('comment', TextType::class, [
+        $builder->add('comment', TextareaType::class, [
             'label' => 'label.comment',
             'required' => false,
-            'attr' => ['maxlength' => 255],
+            'attr' => [
+                'maxlength' => 1500,
+                'rows' => 6,
+                'class' => 'textarea-wrap',
+            ],
         ]);
-
         $builder->add('category', EntityType::class, [
             'class' => Category::class,
             'choice_label' => fn (Category $category): ?string => $category->getTitle(),

@@ -338,3 +338,9 @@ form .btn-link {
     font-size: 1rem;
     padding: 0.6rem 1rem;
 }
+
+.textarea-wrap {
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}

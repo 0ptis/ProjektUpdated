@@ -54,10 +54,9 @@ class Note
     /**
      * Comment.
      */
-    #[ORM\Column(length: 255)]
-    #[Assert\NotBlank]
+    #[ORM\Column(type: 'text', nullable: true)]
     #[Assert\Type('string')]
-    #[Assert\Length(max: 255)]
+    #[Assert\Length(max: 1500)]
     private ?string $comment = null;
 
     /**
@@ -74,7 +73,6 @@ class Note
      */
     #[ORM\ManyToOne(targetEntity: User::class, fetch: 'EXTRA_LAZY')]
     #[ORM\JoinColumn(nullable: false)]
-    #[Assert\NotNull]
     #[Assert\Type(User::class)]
     private ?User $author;
 

@@ -84,7 +84,7 @@
             </trans-unit>
             <trans-unit id="Podgląd">
                 <source>Podgląd</source>
-                <target>Podgląd</target>
+                <target>Wyświetl</target>
             </trans-unit>
             <trans-unit id="Edytuj">
                 <source>Edytuj</source>
@@ -282,7 +282,10 @@
               <source>Repeat password</source>
               <target xml:lang="pl">Powtórz hasło</target>
             </trans-unit>
-
+            <trans-unit id="label.lista">
+              <source>label.lista</source>
+              <target xml:lang="pl">Lista</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
