@@ -52,7 +52,7 @@ class NoteController extends AbstractController
         $user = $this->getUser();
         $pagination = $this->noteService->getPaginatedList($page, $user, $filters);
 
-        return $this->render('note/index.html.twig', ['pagination' => $pagination]);
+        return $this->render('Note/index.html.twig', ['pagination' => $pagination]);
     }
 
     /**
@@ -65,7 +65,7 @@ class NoteController extends AbstractController
     #[Route('/{id}', name: 'note_view', requirements: ['id' => '[1-9]\\d*'], methods: 'GET')]
     public function view(Note $note): Response
     {
-        return $this->render('note/view.html.twig', ['note' => $note]);
+        return $this->render('Note/view.html.twig', ['note' => $note]);
     }
 
     /**
@@ -90,7 +90,7 @@ class NoteController extends AbstractController
             return $this->redirectToRoute('note_index');
         }
 
-        return $this->render('note/create.html.twig', ['form' => $form->createView()]);
+        return $this->render('Note/create.html.twig', ['form' => $form->createView()]);
     }
 
     /**
@@ -117,7 +117,7 @@ class NoteController extends AbstractController
             return $this->redirectToRoute('note_index');
         }
 
-        return $this->render('note/edit.html.twig', ['form' => $form->createView(), 'note' => $note]);
+        return $this->render('Note/edit.html.twig', ['form' => $form->createView(), 'note' => $note]);
     }
 
     /**
@@ -144,6 +144,6 @@ class NoteController extends AbstractController
             return $this->redirectToRoute('note_index');
         }
 
-        return $this->render('note/delete.html.twig', ['form' => $form->createView(), 'note' => $note]);
+        return $this->render('Note/delete.html.twig', ['form' => $form->createView(), 'note' => $note]);
     }
 }

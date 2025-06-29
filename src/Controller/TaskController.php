@@ -59,7 +59,7 @@ class TaskController extends AbstractController
             $filters
         );
 
-        return $this->render('task/index.html.twig', ['pagination' => $pagination]);
+        return $this->render('Task/index.html.twig', ['pagination' => $pagination]);
     }
 
     /**
@@ -78,7 +78,7 @@ class TaskController extends AbstractController
     public function view(Task $task): Response
     {
         return $this->render(
-            'task/view.html.twig',
+            'Task/view.html.twig',
             ['task' => $task]
         );
     }
@@ -114,7 +114,7 @@ class TaskController extends AbstractController
         }
 
         return $this->render(
-            'task/create.html.twig',
+            'Task/create.html.twig',
             ['form' => $form->createView()]
         );
     }
@@ -157,7 +157,7 @@ class TaskController extends AbstractController
         }
 
         return $this->render(
-            'task/edit.html.twig',
+            'Task/edit.html.twig',
             [
                 'form' => $form->createView(),
                 'task' => $task,
@@ -199,7 +199,7 @@ class TaskController extends AbstractController
         }
 
         return $this->render(
-            'task/delete.html.twig',
+            'Task/delete.html.twig',
             [
                 'form' => $form->createView(),
                 'task' => $task,

@@ -48,7 +48,7 @@ class CategoryController extends AbstractController
     {
         $pagination = $this->categoryService->getPaginatedList($page);
 
-        return $this->render('category/index.html.twig', ['pagination' => $pagination]);
+        return $this->render('Category/index.html.twig', ['pagination' => $pagination]);
     }
 
     /**
@@ -67,7 +67,7 @@ class CategoryController extends AbstractController
     public function view(Category $category): Response
     {
         return $this->render(
-            'category/view.html.twig',
+            'Category/view.html.twig',
             ['category' => $category]
         );
     }
@@ -102,7 +102,7 @@ class CategoryController extends AbstractController
         }
 
         return $this->render(
-            'category/create.html.twig',
+            'Category/create.html.twig',
             ['form' => $form->createView()]
         );
     }
@@ -145,7 +145,7 @@ class CategoryController extends AbstractController
         }
 
         return $this->render(
-            'category/edit.html.twig',
+            'Category/edit.html.twig',
             [
                 'form' => $form->createView(),
                 'category' => $category,
@@ -196,7 +196,7 @@ class CategoryController extends AbstractController
         }
 
         return $this->render(
-            'category/delete.html.twig',
+            'Category/delete.html.twig',
             [
                 'form' => $form->createView(),
                 'category' => $category,

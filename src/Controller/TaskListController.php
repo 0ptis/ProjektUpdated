@@ -45,7 +45,7 @@ class TaskListController extends AbstractController
     {
         $pagination = $this->taskListService->getPaginatedList($page);
 
-        return $this->render('tasklist/index.html.twig', ['pagination' => $pagination]);
+        return $this->render('TaskList/index.html.twig', ['pagination' => $pagination]);
     }
 
     /**
@@ -64,7 +64,7 @@ class TaskListController extends AbstractController
     public function view(TaskList $taskList): Response
     {
         return $this->render(
-            'tasklist/view.html.twig',
+            'TaskList/view.html.twig',
             ['taskList' => $taskList]
         );
     }
@@ -99,7 +99,7 @@ class TaskListController extends AbstractController
         }
 
         return $this->render(
-            'tasklist/create.html.twig',
+            'TaskList/create.html.twig',
             ['form' => $form->createView()]
         );
     }
@@ -142,7 +142,7 @@ class TaskListController extends AbstractController
         }
 
         return $this->render(
-            'tasklist/edit.html.twig',
+            'TaskList/edit.html.twig',
             [
                 'form' => $form->createView(),
                 'taskList' => $taskList,
@@ -193,7 +193,7 @@ class TaskListController extends AbstractController
         }
 
         return $this->render(
-            'tasklist/delete.html.twig',
+            'TaskList/delete.html.twig',
             [
                 'form' => $form->createView(),
                 'taskList' => $taskList,
