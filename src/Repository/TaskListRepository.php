@@ -1,22 +1,22 @@
 <?php
 
 /**
- * Lista repository.
+ * TaskList repository.
  */
 
 namespace App\Repository;
 
-use App\Entity\Lista;
+use App\Entity\TaskList;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\ORM\QueryBuilder;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * Class ListaRepository.
+ * Class TaskListRepository.
  *
- * @extends ServiceEntityRepository<Lista>
+ * @extends ServiceEntityRepository<TaskList>
  */
-class ListaRepository extends ServiceEntityRepository
+class TaskListRepository extends ServiceEntityRepository
 {
     /**
      * Constructor.
@@ -25,7 +25,7 @@ class ListaRepository extends ServiceEntityRepository
      */
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Lista::class);
+        parent::__construct($registry, TaskList::class);
     }
 
     /**
@@ -35,28 +35,28 @@ class ListaRepository extends ServiceEntityRepository
      */
     public function queryAll(): QueryBuilder
     {
-        return $this->createQueryBuilder('lista');
+        return $this->createQueryBuilder('task_list');
     }
 
     /**
      * Save entity.
      *
-     * @param Lista $lista Lista entity
+     * @param TaskList $taskList TaskList entity
      */
-    public function save(Lista $lista): void
+    public function save(TaskList $taskList): void
     {
-        $this->getEntityManager()->persist($lista);
+        $this->getEntityManager()->persist($taskList);
         $this->getEntityManager()->flush();
     }
 
     /**
      * Delete entity.
      *
-     * @param Lista $lista Lista entity
+     * @param TaskList $taskList TaskList entity
      */
-    public function delete(Lista $lista): void
+    public function delete(TaskList $taskList): void
     {
-        $this->getEntityManager()->remove($lista);
+        $this->getEntityManager()->remove($taskList);
         $this->getEntityManager()->flush();
     }
 }

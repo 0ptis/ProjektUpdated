@@ -5,12 +5,12 @@
 {% endblock %}
 
 {% block body %}
-    <h1>{{ 'Lista zadań ogólna'|trans }}</h1>
+    <h1>{{ 'TaskList zadań ogólna'|trans }}</h1>
     {% if pagination is defined and pagination.items|length %}
         <div class="centered-container">
-                <a class="create" href="{{ url('task_create') }}" title="{{ 'action.add'|trans }}">
-                    {{ 'Dodaj nowe zadanie'|trans }}
-                </a>
+            <a class="create" href="{{ url('task_create') }}" title="{{ 'action.add'|trans }}">
+                {{ 'Dodaj nowe zadanie'|trans }}
+            </a>
         </div>
         <table class="table table-striped">
             <thead>
@@ -19,8 +19,7 @@
                 <th>{{ knp_pagination_sortable(pagination, 'Data utworzenia'|trans, 'task.createdAt') }}</th>
                 <th>{{ knp_pagination_sortable(pagination, 'Ostatnia aktualizacja'|trans, 'task.updatedAt') }}</th>
                 <th>{{ knp_pagination_sortable(pagination, 'Nazwa'|trans, 'task.title') }}</th>
-                <th>{{ 'Kategoria'|trans }}</th>
-                <th>{{ 'Lista'|trans }}</th>
+                <th>{{ 'TaskList'|trans }}</th>
                 <th>{{ 'Wyświetl'|trans }}</th>
                 <th>{{ 'Edytuj'|trans }}</th>
                 <th>{{ 'Usuń'|trans }}</th>
@@ -33,16 +32,7 @@
                     <td>{{ task.createdAt|format_date('long') }}</td>
                     <td>{{ task.updatedAt|format_date('long') }}</td>
                     <td>{{ task.title }}</td>
-                    <td>
-                        {% set currentParams = app.request.query.all() %}
-                        {% set newParams = currentParams|merge({'categoryId': task.category.id}) %}
-                        <a href="{{ path(app.request.attributes.get('_route'),
-                            app.request.query.all | merge({'categoryId': task.category.id, 'page': 1})
-                        ) }}">
-                            {{ task.category.title }}
-                        </a>
-                    </td>
-                    <td>{{ task.lista.title }}</td>
+                    <td>{{ task.taskList.title }}</td>
                     <td>
                         <a href="{{ url('task_view', {id: task.id}) }}" title="{{ 'action.view'|trans }}">
                             {{ 'Wyświetl'|trans }}
@@ -70,7 +60,6 @@
         <div class="navigation">
             {{ knp_pagination_render(pagination) }}
         </div>
-
     {% else %}
         <p>
             {{ 'message.empty_list'|trans }}

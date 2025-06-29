@@ -226,12 +226,12 @@ Search.appendIndex(
             "summary": "Load\u0020data.",
             "url": "classes/App-DataFixtures-CategoryFixtures.html#method_loadData"
         },                {
-            "fqsen": "\\App\\DataFixtures\\ListaFixtures",
+            "fqsen": "\\App\\DataFixtures\\TaskListFixtures",
             "name": "ListaFixtures",
             "summary": "Class\u0020ListaFixtures.",
             "url": "classes/App-DataFixtures-ListaFixtures.html"
         },                {
-            "fqsen": "\\App\\DataFixtures\\ListaFixtures\u003A\u003AloadData\u0028\u0029",
+            "fqsen": "\\App\\DataFixtures\\TaskListFixtures\u003A\u003AloadData\u0028\u0029",
             "name": "loadData",
             "summary": "Load\u0020data.",
             "url": "classes/App-DataFixtures-ListaFixtures.html#method_loadData"
@@ -391,62 +391,62 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Entity-Enum-UserRole.html#enumcase_ROLE_ADMIN"
         },                {
-            "fqsen": "\\App\\Entity\\Lista",
+            "fqsen": "\\App\\Entity\\TaskList",
             "name": "Lista",
             "summary": "",
             "url": "classes/App-Entity-Lista.html"
         },                {
-            "fqsen": "\\App\\Entity\\Lista\u003A\u003AgetId\u0028\u0029",
+            "fqsen": "\\App\\Entity\\TaskList\u003A\u003AgetId\u0028\u0029",
             "name": "getId",
             "summary": "",
             "url": "classes/App-Entity-Lista.html#method_getId"
         },                {
-            "fqsen": "\\App\\Entity\\Lista\u003A\u003AgetTitle\u0028\u0029",
+            "fqsen": "\\App\\Entity\\TaskList\u003A\u003AgetTitle\u0028\u0029",
             "name": "getTitle",
             "summary": "",
             "url": "classes/App-Entity-Lista.html#method_getTitle"
         },                {
-            "fqsen": "\\App\\Entity\\Lista\u003A\u003AsetTitle\u0028\u0029",
+            "fqsen": "\\App\\Entity\\TaskList\u003A\u003AsetTitle\u0028\u0029",
             "name": "setTitle",
             "summary": "",
             "url": "classes/App-Entity-Lista.html#method_setTitle"
         },                {
-            "fqsen": "\\App\\Entity\\Lista\u003A\u003AgetCreatedAt\u0028\u0029",
+            "fqsen": "\\App\\Entity\\TaskList\u003A\u003AgetCreatedAt\u0028\u0029",
             "name": "getCreatedAt",
             "summary": "",
             "url": "classes/App-Entity-Lista.html#method_getCreatedAt"
         },                {
-            "fqsen": "\\App\\Entity\\Lista\u003A\u003AsetCreatedAt\u0028\u0029",
+            "fqsen": "\\App\\Entity\\TaskList\u003A\u003AsetCreatedAt\u0028\u0029",
             "name": "setCreatedAt",
             "summary": "",
             "url": "classes/App-Entity-Lista.html#method_setCreatedAt"
         },                {
-            "fqsen": "\\App\\Entity\\Lista\u003A\u003AgetUpdatedAt\u0028\u0029",
+            "fqsen": "\\App\\Entity\\TaskList\u003A\u003AgetUpdatedAt\u0028\u0029",
             "name": "getUpdatedAt",
             "summary": "",
             "url": "classes/App-Entity-Lista.html#method_getUpdatedAt"
         },                {
-            "fqsen": "\\App\\Entity\\Lista\u003A\u003AsetUpdatedAt\u0028\u0029",
+            "fqsen": "\\App\\Entity\\TaskList\u003A\u003AsetUpdatedAt\u0028\u0029",
             "name": "setUpdatedAt",
             "summary": "",
             "url": "classes/App-Entity-Lista.html#method_setUpdatedAt"
         },                {
-            "fqsen": "\\App\\Entity\\Lista\u003A\u003A\u0024id",
+            "fqsen": "\\App\\Entity\\TaskList\u003A\u003A\u0024id",
             "name": "id",
             "summary": "",
             "url": "classes/App-Entity-Lista.html#property_id"
         },                {
-            "fqsen": "\\App\\Entity\\Lista\u003A\u003A\u0024title",
+            "fqsen": "\\App\\Entity\\TaskList\u003A\u003A\u0024title",
             "name": "title",
             "summary": "",
             "url": "classes/App-Entity-Lista.html#property_title"
         },                {
-            "fqsen": "\\App\\Entity\\Lista\u003A\u003A\u0024createdAt",
+            "fqsen": "\\App\\Entity\\TaskList\u003A\u003A\u0024createdAt",
             "name": "createdAt",
             "summary": "",
             "url": "classes/App-Entity-Lista.html#property_createdAt"
         },                {
-            "fqsen": "\\App\\Entity\\Lista\u003A\u003A\u0024updatedAt",
+            "fqsen": "\\App\\Entity\\TaskList\u003A\u003A\u0024updatedAt",
             "name": "updatedAt",
             "summary": "",
             "url": "classes/App-Entity-Lista.html#property_updatedAt"
@@ -661,22 +661,22 @@ Search.appendIndex(
             "summary": "Returns\u0020the\u0020prefix\u0020of\u0020the\u0020template\u0020block\u0020name\u0020for\u0020this\u0020type.",
             "url": "classes/App-Form-Type-CategoryType.html#method_getBlockPrefix"
         },                {
-            "fqsen": "\\App\\Form\\Type\\ListaType",
+            "fqsen": "\\App\\Form\\Type\\TaskListType",
             "name": "ListaType",
             "summary": "Class\u0020ListaType.",
             "url": "classes/App-Form-Type-ListaType.html"
         },                {
-            "fqsen": "\\App\\Form\\Type\\ListaType\u003A\u003AbuildForm\u0028\u0029",
+            "fqsen": "\\App\\Form\\Type\\TaskListType\u003A\u003AbuildForm\u0028\u0029",
             "name": "buildForm",
             "summary": "Builds\u0020the\u0020form.",
             "url": "classes/App-Form-Type-ListaType.html#method_buildForm"
         },                {
-            "fqsen": "\\App\\Form\\Type\\ListaType\u003A\u003AconfigureOptions\u0028\u0029",
+            "fqsen": "\\App\\Form\\Type\\TaskListType\u003A\u003AconfigureOptions\u0028\u0029",
             "name": "configureOptions",
             "summary": "Configures\u0020the\u0020options\u0020for\u0020this\u0020type.",
             "url": "classes/App-Form-Type-ListaType.html#method_configureOptions"
         },                {
-            "fqsen": "\\App\\Form\\Type\\ListaType\u003A\u003AgetBlockPrefix\u0028\u0029",
+            "fqsen": "\\App\\Form\\Type\\TaskListType\u003A\u003AgetBlockPrefix\u0028\u0029",
             "name": "getBlockPrefix",
             "summary": "Returns\u0020the\u0020prefix\u0020of\u0020the\u0020template\u0020block\u0020name\u0020for\u0020this\u0020type.",
             "url": "classes/App-Form-Type-ListaType.html#method_getBlockPrefix"
@@ -746,27 +746,27 @@ Search.appendIndex(
             "summary": "Delete\u0020entity.",
             "url": "classes/App-Repository-CategoryRepository.html#method_delete"
         },                {
-            "fqsen": "\\App\\Repository\\ListaRepository",
+            "fqsen": "\\App\\Repository\\TaskListRepository",
             "name": "ListaRepository",
             "summary": "Class\u0020ListaRepository.",
             "url": "classes/App-Repository-ListaRepository.html"
         },                {
-            "fqsen": "\\App\\Repository\\ListaRepository\u003A\u003A__construct\u0028\u0029",
+            "fqsen": "\\App\\Repository\\TaskListRepository\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
             "summary": "Constructor.",
             "url": "classes/App-Repository-ListaRepository.html#method___construct"
         },                {
-            "fqsen": "\\App\\Repository\\ListaRepository\u003A\u003AqueryAll\u0028\u0029",
+            "fqsen": "\\App\\Repository\\TaskListRepository\u003A\u003AqueryAll\u0028\u0029",
             "name": "queryAll",
             "summary": "Query\u0020all\u0020records.",
             "url": "classes/App-Repository-ListaRepository.html#method_queryAll"
         },                {
-            "fqsen": "\\App\\Repository\\ListaRepository\u003A\u003Asave\u0028\u0029",
+            "fqsen": "\\App\\Repository\\TaskListRepository\u003A\u003Asave\u0028\u0029",
             "name": "save",
             "summary": "Save\u0020entity.",
             "url": "classes/App-Repository-ListaRepository.html#method_save"
         },                {
-            "fqsen": "\\App\\Repository\\ListaRepository\u003A\u003Adelete\u0028\u0029",
+            "fqsen": "\\App\\Repository\\TaskListRepository\u003A\u003Adelete\u0028\u0029",
             "name": "delete",
             "summary": "Delete\u0020entity.",
             "url": "classes/App-Repository-ListaRepository.html#method_delete"
@@ -911,67 +911,67 @@ Search.appendIndex(
             "summary": "Can\u0020Category\u0020be\u0020deleted\u003F",
             "url": "classes/App-Service-CategoryServiceInterface.html#method_canBeDeleted"
         },                {
-            "fqsen": "\\App\\Service\\ListaService",
+            "fqsen": "\\App\\Service\\TaskListService",
             "name": "ListaService",
             "summary": "Class\u0020ListaService.",
             "url": "classes/App-Service-ListaService.html"
         },                {
-            "fqsen": "\\App\\Service\\ListaService\u003A\u003A__construct\u0028\u0029",
+            "fqsen": "\\App\\Service\\TaskListService\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
             "summary": "Constructor.",
             "url": "classes/App-Service-ListaService.html#method___construct"
         },                {
-            "fqsen": "\\App\\Service\\ListaService\u003A\u003AgetPaginatedList\u0028\u0029",
+            "fqsen": "\\App\\Service\\TaskListService\u003A\u003AgetPaginatedList\u0028\u0029",
             "name": "getPaginatedList",
             "summary": "Get\u0020paginated\u0020list.",
             "url": "classes/App-Service-ListaService.html#method_getPaginatedList"
         },                {
-            "fqsen": "\\App\\Service\\ListaService\u003A\u003Asave\u0028\u0029",
+            "fqsen": "\\App\\Service\\TaskListService\u003A\u003Asave\u0028\u0029",
             "name": "save",
             "summary": "Save\u0020entity.",
             "url": "classes/App-Service-ListaService.html#method_save"
         },                {
-            "fqsen": "\\App\\Service\\ListaService\u003A\u003Adelete\u0028\u0029",
+            "fqsen": "\\App\\Service\\TaskListService\u003A\u003Adelete\u0028\u0029",
             "name": "delete",
             "summary": "",
             "url": "classes/App-Service-ListaService.html#method_delete"
         },                {
-            "fqsen": "\\App\\Service\\ListaService\u003A\u003AfindOneById\u0028\u0029",
+            "fqsen": "\\App\\Service\\TaskListService\u003A\u003AfindOneById\u0028\u0029",
             "name": "findOneById",
             "summary": "Find\u0020by\u0020id.",
             "url": "classes/App-Service-ListaService.html#method_findOneById"
         },                {
-            "fqsen": "\\App\\Service\\ListaService\u003A\u003APAGINATOR_ITEMS_PER_PAGE",
+            "fqsen": "\\App\\Service\\TaskListService\u003A\u003APAGINATOR_ITEMS_PER_PAGE",
             "name": "PAGINATOR_ITEMS_PER_PAGE",
             "summary": "Items\u0020per\u0020page.",
             "url": "classes/App-Service-ListaService.html#constant_PAGINATOR_ITEMS_PER_PAGE"
         },                {
-            "fqsen": "\\App\\Service\\ListaService\u003A\u003A\u0024listaRepository",
+            "fqsen": "\\App\\Service\\TaskListService\u003A\u003A\u0024listaRepository",
             "name": "listaRepository",
             "summary": "",
             "url": "classes/App-Service-ListaService.html#property_listaRepository"
         },                {
-            "fqsen": "\\App\\Service\\ListaService\u003A\u003A\u0024paginator",
+            "fqsen": "\\App\\Service\\TaskListService\u003A\u003A\u0024paginator",
             "name": "paginator",
             "summary": "",
             "url": "classes/App-Service-ListaService.html#property_paginator"
         },                {
-            "fqsen": "\\App\\Service\\ListaServiceInterface",
+            "fqsen": "\\App\\Service\\TaskListServiceInterface",
             "name": "ListaServiceInterface",
             "summary": "Interface\u0020ListaServiceInterface.",
             "url": "classes/App-Service-ListaServiceInterface.html"
         },                {
-            "fqsen": "\\App\\Service\\ListaServiceInterface\u003A\u003AgetPaginatedList\u0028\u0029",
+            "fqsen": "\\App\\Service\\TaskListServiceInterface\u003A\u003AgetPaginatedList\u0028\u0029",
             "name": "getPaginatedList",
             "summary": "Get\u0020paginated\u0020list.",
             "url": "classes/App-Service-ListaServiceInterface.html#method_getPaginatedList"
         },                {
-            "fqsen": "\\App\\Service\\ListaServiceInterface\u003A\u003Asave\u0028\u0029",
+            "fqsen": "\\App\\Service\\TaskListServiceInterface\u003A\u003Asave\u0028\u0029",
             "name": "save",
             "summary": "Save\u0020entity.",
             "url": "classes/App-Service-ListaServiceInterface.html#method_save"
         },                {
-            "fqsen": "\\App\\Service\\ListaServiceInterface\u003A\u003Adelete\u0028\u0029",
+            "fqsen": "\\App\\Service\\TaskListServiceInterface\u003A\u003Adelete\u0028\u0029",
             "name": "delete",
             "summary": "",
             "url": "classes/App-Service-ListaServiceInterface.html#method_delete"

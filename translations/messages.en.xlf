@@ -38,7 +38,6 @@
                 <source>title.record_view</source>
                 <target>Record view #%id%</target>
             </trans-unit>
-
             <trans-unit id="message.created_successfully">
                 <source>message.created_successfully</source>
                 <target>Created successfully</target>
@@ -238,6 +237,63 @@
                 <source>message.lista_contains_tasks</source>
                 <target>The list contains tasks.</target>
             </trans-unit>
+            <trans-unit id="title.note_create">
+              <source>title.note_create</source>
+              <target>Utwórz notatkę</target>
+            </trans-unit>
+            <trans-unit id="title.note_delete">
+              <source>title.note_delete</source>
+              <target>Usuń notatkę</target>
+            </trans-unit>
+            <trans-unit id="title.note_edit">
+              <source>title.note_edit</source>
+              <target>Edytuj notatkę</target>
+            </trans-unit>
+            <trans-unit id="title.note_list">
+              <source>title.note_list</source>
+              <target>Lista notatek</target>
+            </trans-unit>
+            <trans-unit id="TaskList notatek ogólna">
+              <source>TaskList notatek ogólna</source>
+              <target>Ogólna lista notatek</target>
+            </trans-unit>
+            <trans-unit id="Dodaj nową notatkę">
+              <source>Dodaj nową notatkę</source>
+              <target>Dodaj nową notatkę</target>
+            </trans-unit>
+            <trans-unit id="title.note_details">
+              <source>title.note_details</source>
+              <target>Szczegóły notatki</target>
+            </trans-unit>
+            <trans-unit id="TaskList zadań ogólna">
+              <source>TaskList zadań ogólna</source>
+              <target>Ogólna lista zadań</target>
+            </trans-unit>
+            <trans-unit id="TaskList">
+              <source>TaskList</source>
+              <target>Lista zadań</target>
+            </trans-unit>
+            <trans-unit id="title.tasklist_create">
+              <source>title.tasklist_create</source>
+              <target>Utwórz listę zadań</target>
+            </trans-unit>
+            <trans-unit id="title.tasklist_delete">
+              <source>title.tasklist_delete</source>
+              <target>Usuń listę zadań</target>
+            </trans-unit>
+            <trans-unit id="title.tasklist_edit">
+              <source>title.tasklist_edit</source>
+              <target>Edytuj listę zadań</target>
+            </trans-unit>
+            <trans-unit id="TaskLists">
+              <source>TaskLists</source>
+              <target>Listy zadań</target>
+            </trans-unit>
+            <trans-unit id="title.tasklist_details">
+              <source>title.tasklist_details</source>
+              <target>Szczegóły listy zadań</target>
+            </trans-unit>
+
         </body>
     </file>
 </xliff>

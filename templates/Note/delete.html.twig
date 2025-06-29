@@ -1,18 +1,18 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-    {{ 'title.lista_delete'|trans({'%id%': lista.id|default('')}) }}
+    {{ 'title.note_delete'|trans({'%id%': note.id|default('')}) }}
 {% endblock %}
 
 {% block body %}
-    <h1>{{ 'title.lista_delete'|trans({'%id%': lista.id|default('')}) }}</h1>
+    <h1>{{ 'title.note_delete'|trans({'%id%': note.id|default('')}) }}</h1>
     {{ form_start(form) }}
     {{ form_widget(form) }}
-    <div class="form-group row float-sm-right">
+    <div class="centered-container">
         <input type="submit" value="{{ 'action.delete'|trans }}" class="btn btn-primary" />
     </div>
     <div class="centered-container">
-        <a class="create" href="{{ url('lista_index') }}" title="{{ 'action.back_to_list'|trans }}">
+        <a class="create" href="{{ url('note_index') }}" title="{{ 'action.back_to_list'|trans }}">
             {{ 'Powrót'|trans }}
         </a>
     </div>

@@ -1,22 +1,22 @@
 <?php
 
 /**
- * Task entity.
+ * Note entity.
  */
 
 namespace App\Entity;
 
-use Gedmo\Mapping\Annotation as Gedmo;
-use App\Repository\TaskRepository;
+use App\Repository\NoteRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * Class Task.
+ * Class Note.
  */
-#[ORM\Entity(repositoryClass: TaskRepository::class)]
-#[ORM\Table(name: 'tasks')]
-class Task
+#[ORM\Entity(repositoryClass: NoteRepository::class)]
+#[ORM\Table(name: 'notes')]
+class Note
 {
     /**
      * Primary key.
@@ -35,28 +35,43 @@ class Task
     #[Assert\Length(min: 3, max: 255)]
     private ?string $title = null;
 
+    /**
+     * Created At.
+     */
     #[ORM\Column(type: 'datetime_immutable')]
     #[Gedmo\Timestampable(on: 'create')]
     #[Assert\Type(\DateTimeImmutable::class)]
     private ?\DateTimeImmutable $createdAt;
 
+    /**
+     * Updated At.
+     */
     #[ORM\Column(type: 'datetime_immutable')]
     #[Gedmo\Timestampable(on: 'update')]
     #[Assert\Type(\DateTimeImmutable::class)]
     private ?\DateTimeImmutable $updatedAt;
 
+    /**
+     * Comment.
+     */
     #[ORM\Column(length: 255)]
     #[Assert\NotBlank]
     #[Assert\Type('string')]
     #[Assert\Length(max: 255)]
     private ?string $comment = null;
 
+    /**
+     * Category.
+     */
     #[ORM\ManyToOne]
     #[ORM\JoinColumn(nullable: false)]
     #[Assert\NotNull]
-    #[Assert\Type(TaskList::class)]
-    private ?TaskList $taskList = null;
+    #[Assert\Type(Category::class)]
+    private ?Category $category = null;
 
+    /**
+     * Author.
+     */
     #[ORM\ManyToOne(targetEntity: User::class, fetch: 'EXTRA_LAZY')]
     #[ORM\JoinColumn(nullable: false)]
     #[Assert\NotNull]
@@ -64,7 +79,7 @@ class Task
     private ?User $author;
 
     /**
-     * Getter for Id.
+     * Getter for id.
      *
      * @return int|null Id
      */
@@ -158,25 +173,25 @@ class Task
     }
 
     /**
-     * Getter for lista.
+     * Getter for category.
      *
-     * @return TaskList|null TaskList
+     * @return Category|null Category
      */
-    public function getTaskList(): ?TaskList
+    public function getCategory(): ?Category
     {
-        return $this->taskList;
+        return $this->category;
     }
 
     /**
-     * Setter for lista.
+     * Setter for category.
      *
-     * @param TaskList|null $taskList TaskList
+     * @param Category|null $category Category
      *
      * @return void
      */
-    public function setTaskList(?TaskList $taskList): self
+    public function setCategory(?Category $category): static
     {
-        $this->taskList = $taskList;
+        $this->category = $category;
 
         return $this;
     }

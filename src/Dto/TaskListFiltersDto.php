@@ -6,8 +6,7 @@
 
 namespace App\Dto;
 
-use App\Entity\Category;
-use App\Entity\Lista;
+use App\Entity\TaskList;
 
 /**
  * Class TaskListFiltersDto.
@@ -17,10 +16,9 @@ class TaskListFiltersDto
     /**
      * Constructor.
      *
-     * @param Category|null $category Category entity
-     * @param Lista|null    $lista    Lista entity
+     * @param TaskList|null $taskList TaskList entity
      */
-    public function __construct(public readonly ?Category $category, public readonly ?Lista $lista)
+    public function __construct(public readonly ?TaskList $taskList)
     {
     }
 }

@@ -1,14 +1,14 @@
 <?php
 
 /**
- * Lista controller.
+ * TaskList controller.
  */
 
 namespace App\Controller;
 
-use App\Entity\Lista;
-use App\Form\Type\ListaType;
-use App\Service\ListaServiceInterface;
+use App\Entity\TaskList;
+use App\Form\Type\TaskListType;
+use App\Service\TaskListServiceInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Component\HttpFoundation\Request;
@@ -18,18 +18,18 @@ use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
- * Class ListaController.
+ * Class TaskListController.
  */
-#[Route('/lista')]
-class ListaController extends AbstractController
+#[Route('/tasklist')]
+class TaskListController extends AbstractController
 {
     /**
      * Constructor.
      *
-     * @param ListaServiceInterface $listaService Lista service
-     * @param TranslatorInterface   $translator   Translator
+     * @param TaskListServiceInterface $taskListService TaskList service
+     * @param TranslatorInterface      $translator      Translator
      */
-    public function __construct(private readonly ListaServiceInterface $listaService, private readonly TranslatorInterface $translator)
+    public function __construct(private readonly TaskListServiceInterface $taskListService, private readonly TranslatorInterface $translator)
     {
     }
 
@@ -40,35 +40,32 @@ class ListaController extends AbstractController
      *
      * @return Response HTTP response
      */
-    #[Route(
-        name: 'lista_index',
-        methods: 'GET'
-    )]
+    #[Route(name: 'tasklist_index', methods: 'GET')]
     public function index(#[MapQueryParameter] int $page = 1): Response
     {
-        $pagination = $this->listaService->getPaginatedList($page);
+        $pagination = $this->taskListService->getPaginatedList($page);
 
-        return $this->render('lista/index.html.twig', ['pagination' => $pagination]);
+        return $this->render('tasklist/index.html.twig', ['pagination' => $pagination]);
     }
 
     /**
      * View action.
      *
-     * @param Lista $lista Lista entity
+     * @param TaskList $taskList TaskList entity
      *
      * @return Response HTTP response
      */
     #[Route(
         '/{id}',
-        name: 'lista_view',
+        name: 'tasklist_view',
         requirements: ['id' => '[1-9]\d*'],
         methods: 'GET'
     )]
-    public function view(Lista $lista): Response
+    public function view(TaskList $taskList): Response
     {
         return $this->render(
-            'lista/view.html.twig',
-            ['lista' => $lista]
+            'tasklist/view.html.twig',
+            ['taskList' => $taskList]
         );
     }
 
@@ -81,28 +78,28 @@ class ListaController extends AbstractController
      */
     #[Route(
         '/create',
-        name: 'lista_create',
+        name: 'tasklist_create',
         methods: 'GET|POST'
     )]
     public function create(Request $request): Response
     {
-        $lista = new Lista();
-        $form = $this->createForm(ListaType::class, $lista);
+        $taskList = new TaskList();
+        $form = $this->createForm(TaskListType::class, $taskList);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->listaService->save($lista);
+            $this->taskListService->save($taskList);
 
             $this->addFlash(
                 'success',
                 $this->translator->trans('message.created_successfully')
             );
 
-            return $this->redirectToRoute('lista_index');
+            return $this->redirectToRoute('tasklist_index');
         }
 
         return $this->render(
-            'lista/create.html.twig',
+            'tasklist/create.html.twig',
             ['form' => $form->createView()]
         );
     }
@@ -110,52 +107,45 @@ class ListaController extends AbstractController
     /**
      * Edit action.
      *
-     * @param Request $request HTTP request
-     * @param Lista   $lista   Lista entity
+     * @param Request  $request  HTTP request
+     * @param TaskList $taskList TaskList entity
      *
      * @return Response HTTP response
-     *
-     * @Route(
-     *     "/{id}/edit",
-     *     name="lista_edit",
-     *     requirements={"id"="[1-9]\d*"},
-     *     methods="GET|PUT"
-     * )
      */
     #[Route(
         '/{id}/edit',
-        name: 'lista_edit',
+        name: 'tasklist_edit',
         requirements: ['id' => '[1-9]\d*'],
         methods: 'GET|PUT'
     )]
-    public function edit(Request $request, Lista $lista): Response
+    public function edit(Request $request, TaskList $taskList): Response
     {
         $form = $this->createForm(
-            ListaType::class,
-            $lista,
+            TaskListType::class,
+            $taskList,
             [
                 'method' => 'PUT',
-                'action' => $this->generateUrl('lista_edit', ['id' => $lista->getId()]),
+                'action' => $this->generateUrl('tasklist_edit', ['id' => $taskList->getId()]),
             ]
         );
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->listaService->save($lista);
+            $this->taskListService->save($taskList);
 
             $this->addFlash(
                 'success',
                 $this->translator->trans('message.edited_successfully')
             );
 
-            return $this->redirectToRoute('lista_index');
+            return $this->redirectToRoute('tasklist_index');
         }
 
         return $this->render(
-            'lista/edit.html.twig',
+            'tasklist/edit.html.twig',
             [
                 'form' => $form->createView(),
-                'lista' => $lista,
+                'taskList' => $taskList,
             ]
         );
     }
@@ -163,49 +153,50 @@ class ListaController extends AbstractController
     /**
      * Delete action.
      *
-     * @param Request $request HTTP request
-     * @param Lista   $lista   Lista entity
+     * @param Request  $request  HTTP request
+     * @param TaskList $taskList TaskList entity
      *
      * @return Response HTTP response
      */
     #[Route(
         '/{id}/delete',
-        name: 'lista_delete',
+        name: 'tasklist_delete',
         requirements: ['id' => '[1-9]\d*'],
         methods: 'GET|DELETE'
     )]
-    public function delete(Request $request, Lista $lista): Response
+    public function delete(Request $request, TaskList $taskList): Response
     {
-        if (!$this->listaService->canBeDeleted($lista)) {
+        if (!$this->taskListService->canBeDeleted($taskList)) {
             $this->addFlash(
                 'warning',
                 $this->translator->trans('message.lista_contains_tasks')
             );
+
+            return $this->redirectToRoute('tasklist_index');
         }
 
-        return $this->redirectToRoute('category_index');
-        $form = $this->createForm(FormType::class, $lista, [
+        $form = $this->createForm(FormType::class, $taskList, [
             'method' => 'DELETE',
-            'action' => $this->generateUrl('lista_delete', ['id' => $lista->getId()]),
+            'action' => $this->generateUrl('tasklist_delete', ['id' => $taskList->getId()]),
         ]);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->listaService->delete($lista);
+            $this->taskListService->delete($taskList);
 
             $this->addFlash(
                 'success',
                 $this->translator->trans('message.deleted_successfully')
             );
 
-            return $this->redirectToRoute('lista_index');
+            return $this->redirectToRoute('tasklist_index');
         }
 
         return $this->render(
-            'lista/delete.html.twig',
+            'tasklist/delete.html.twig',
             [
                 'form' => $form->createView(),
-                'lista' => $lista,
+                'taskList' => $taskList,
             ]
         );
     }

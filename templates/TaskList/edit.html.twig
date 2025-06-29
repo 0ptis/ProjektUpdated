@@ -1,18 +1,18 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-    {{ 'title.lista_edit'|trans({'%id%': lista.id|default('')}) }}
+    {{ 'title.tasklist_edit'|trans({'%id%': tasklist.id|default('')}) }}
 {% endblock %}
 
 {% block body %}
-    <h1>{{ 'title.lista_edit'|trans({'%id%': lista.id|default('')}) }}</h1>
+    <h1>{{ 'title.tasklist_edit'|trans({'%id%': tasklist.id|default('')}) }}</h1>
     {{ form_start(form) }}
     {{ form_widget(form) }}
-    <div class="form-group row float-sm-right">
+    <div class="centered-container">
         <input type="submit" value="{{ 'action.save'|trans }}" class="btn btn-primary"/>
     </div>
     <div class="centered-container">
-        <a class="create" href="{{ url('lista_index') }}" title="{{ 'action.back_to_list'|trans }}">
+        <a class="create" href="{{ url('tasklist_index') }}" title="{{ 'action.back_to_list'|trans }}">
             {{ 'Powrót'|trans }}
         </a>
     </div>

@@ -33,12 +33,11 @@ class TaskService implements TaskServiceInterface
     /**
      * Constructor.
      *
-     * @param CategoryServiceInterface $categoryService Category service
      * @param PaginatorInterface       $paginator       Paginator
      * @param TaskRepository           $taskRepository  Task repository
-     * @param ListaServiceInterface    $listaService    Lista service
+     * @param TaskListServiceInterface $taskListService TaskList service
      */
-    public function __construct(private readonly CategoryServiceInterface $categoryService, private readonly PaginatorInterface $paginator, private readonly TaskRepository $taskRepository, private readonly ListaServiceInterface $listaService)
+    public function __construct(private readonly PaginatorInterface $paginator, private readonly TaskRepository $taskRepository, private readonly TaskListServiceInterface $taskListService)
     {
     }
 
@@ -49,7 +48,7 @@ class TaskService implements TaskServiceInterface
      * @param User                    $author  Tasks author
      * @param TaskListInputFiltersDto $filters Filters
      *
-     * @return void
+     * @return PaginationInterface Paginated list
      */
     public function getPaginatedList(int $page, User $author, TaskListInputFiltersDto $filters): PaginationInterface
     {
@@ -60,7 +59,7 @@ class TaskService implements TaskServiceInterface
             $page,
             self::PAGINATOR_ITEMS_PER_PAGE,
             [
-                'sortFieldAllowList' => ['task.id', 'task.createdAt', 'task.updatedAt', 'task.title', 'category.title'],
+                'sortFieldAllowList' => ['task.id', 'task.createdAt', 'task.updatedAt', 'task.title'],
                 'defaultSortFieldName' => 'task.createdAt',
                 'defaultSortDirection' => 'desc',
             ]
@@ -97,8 +96,7 @@ class TaskService implements TaskServiceInterface
     private function prepareFilters(TaskListInputFiltersDto $filters): TaskListFiltersDto
     {
         return new TaskListFiltersDto(
-            null !== $filters->categoryId ? $this->categoryService->findOneById($filters->categoryId) : null,
-            null !== $filters->listaId ? $this->listaService->findOneById($filters->listaId) : null,
+            null !== $filters->listaId ? $this->taskListService->findOneById($filters->listaId) : null
         );
     }
 }

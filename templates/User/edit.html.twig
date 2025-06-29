@@ -9,9 +9,13 @@
     {{ form_row(form.email) }}
     {{ form_row(form.plainPassword.first) }}
     {{ form_row(form.plainPassword.second) }}
-    <a href="{{ url('app_logout') }}">
-    <button class="btn">Save changes</button>
+    <a href="{{ url('home_index') }}">
+    <button class="btn">Zapisz</button>
     </a>
     {{ form_end(form) }}
-
+    <div class="centered-container">
+    <a class="create" href="{{ url('home_index') }}" title="{{ 'action.back_to_list'|trans }}">
+        {{ 'Strona główna'|trans }}
+    </a>
+    </div>
 {% endblock %}

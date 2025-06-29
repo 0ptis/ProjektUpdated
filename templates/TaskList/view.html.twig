@@ -1,24 +1,24 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-    {{ 'title.lista_details'|trans({'%id%': lista.id|default('')}) }}
+    {{ 'title.tasklist_details'|trans({'%id%': taskList.id|default('')}) }}
 {% endblock %}
 
 {% block body %}
-    <h1>{{ 'title.lista_details'|trans({'%id%': lista.id|default('')}) }}</h1>
-    {% if lista is defined and lista|length %}
+    <h1>{{ 'title.tasklist_details'|trans({'%id%': taskList.id|default('')}) }}</h1>
+    {% if taskList is not null %}
         <dl class="dl-horizontal task-details">
             <dt>{{ 'label.id'|trans }}</dt>
-            <dd>{{ lista.id }}</dd>
+            <dd>{{ taskList.id }}</dd>
             <dt>{{ 'label.created_at'|trans }}</dt>
-            <dd>{{ lista.createdAt|date('Y/m/d') }}</dd>
+            <dd>{{ taskList.createdAt|date('Y/m/d') }}</dd>
             <dt>{{ 'label.updated_at'|trans }}</dt>
-            <dd>{{ lista.updatedAt|date('Y/m/d') }}</dd>
+            <dd>{{ taskList.updatedAt|date('Y/m/d') }}</dd>
             <dt>{{ 'label.title'|trans }}</dt>
-            <dd>{{ lista.title }}</dd>
+            <dd>{{ taskList.title }}</dd>
         </dl>
         <div class="centered-container">
-            <a class="create" href="{{ url('lista_index') }}" title="{{ 'action.back_to_list'|trans }}">
+            <a class="create" href="{{ url('tasklist_index') }}" title="{{ 'action.back_to_list'|trans }}">
                 {{ 'Powrót'|trans }}
             </a>
         </div>

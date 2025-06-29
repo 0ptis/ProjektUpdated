@@ -214,6 +214,75 @@
                 <source>message.lista_contains_tasks</source>
                 <target>Lista zawiera zadania.</target>
             </trans-unit>
+            <trans-unit id="title.note_create">
+              <source>title.note_create</source>
+              <target xml:lang="pl">Utwórz notatkę</target>
+            </trans-unit>
+            <trans-unit id="title.note_delete">
+              <source>title.note_delete</source>
+              <target xml:lang="pl">Usuń notatkę</target>
+            </trans-unit>
+            <trans-unit id="title.note_edit">
+              <source>title.note_edit</source>
+              <target xml:lang="pl">Edytuj notatkę</target>
+            </trans-unit>
+            <trans-unit id="title.note_list">
+              <source>title.note_list</source>
+              <target xml:lang="pl">Lista notatek</target>
+            </trans-unit>
+            <trans-unit id="TaskList notatek ogólna">
+              <source>TaskList notatek ogólna</source>
+              <target xml:lang="pl">Ogólna lista notatek</target>
+            </trans-unit>
+            <trans-unit id="Dodaj nową notatkę">
+              <source>Dodaj nową notatkę</source>
+              <target xml:lang="pl">Dodaj nową notatkę</target>
+            </trans-unit>
+            <trans-unit id="title.note_details">
+              <source>title.note_details</source>
+              <target xml:lang="pl">Szczegóły notatki</target>
+            </trans-unit>
+            <trans-unit id="TaskList zadań ogólna">
+              <source>TaskList zadań ogólna</source>
+              <target xml:lang="pl">Ogólna lista zadań</target>
+            </trans-unit>
+            <trans-unit id="TaskList">
+              <source>TaskList</source>
+              <target xml:lang="pl">Lista zadań</target>
+            </trans-unit>
+            <trans-unit id="title.tasklist_create">
+              <source>title.tasklist_create</source>
+              <target xml:lang="pl">Utwórz listę zadań</target>
+            </trans-unit>
+            <trans-unit id="title.tasklist_delete">
+              <source>title.tasklist_delete</source>
+              <target xml:lang="pl">Usuń listę zadań</target>
+            </trans-unit>
+            <trans-unit id="title.tasklist_edit">
+              <source>title.tasklist_edit</source>
+              <target xml:lang="pl">Edytuj listę zadań</target>
+            </trans-unit>
+            <trans-unit id="TaskLists">
+              <source>TaskLists</source>
+              <target xml:lang="pl">Listy zadań</target>
+            </trans-unit>
+            <trans-unit id="title.tasklist_details">
+              <source>title.tasklist_details</source>
+              <target xml:lang="pl">Szczegóły listy zadań</target>
+            </trans-unit>
+            <trans-unit id="Email">
+              <source>Email</source>
+              <target xml:lang="pl">Email</target>
+            </trans-unit>
+            <trans-unit id="New password">
+              <source>New password</source>
+              <target xml:lang="pl">Nowe hasło</target>
+            </trans-unit>
+            <trans-unit id="Repeat password">
+              <source>Repeat password</source>
+              <target xml:lang="pl">Powtórz hasło</target>
+            </trans-unit>
+
         </body>
     </file>
 </xliff>

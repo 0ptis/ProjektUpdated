@@ -6,8 +6,7 @@
 
 namespace App\DataFixtures;
 
-use App\Entity\Category;
-use App\Entity\Lista;
+use App\Entity\TaskList;
 use App\Entity\Task;
 use App\Entity\User;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
@@ -48,11 +47,9 @@ class TaskFixtures extends AbstractBaseFixtures implements DependentFixtureInter
                     $this->faker->dateTimeBetween('-100 days', '-1 days')
                 )
             );
-            $category = $this->getRandomReference('category', Category::class);
-            $task->setCategory($category);
 
-            $lista = $this->getRandomReference('lista', Lista::class);
-            $task->setLista($lista);
+            $taskList = $this->getRandomReference('task_list', TaskList::class);
+            $task->setTaskList($taskList);
 
             $author = $this->getRandomReference('admin', User::class);
             $task->setAuthor($author);
@@ -67,13 +64,12 @@ class TaskFixtures extends AbstractBaseFixtures implements DependentFixtureInter
      *
      * @return string[] of dependencies
      *
-     * @psalm-return array{0: CategoryFixtures::class}
+     * @psalm-return array{0: TaskListFixtures::class, 1: UserFixtures::class}
      */
     public function getDependencies(): array
     {
         return [
-            CategoryFixtures::class,
-            ListaFixtures::class,
+            TaskListFixtures::class,
             UserFixtures::class,
         ];
     }

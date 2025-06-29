@@ -1,19 +1,18 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-    {{ 'title.task_create'|trans }}
+    {{ 'title.tasklist_create'|trans }}
 {% endblock %}
 
 {% block body %}
-    <h1>{{ 'title.task_create'|trans }}</h1>
-    {{ form_start(form, {'attr': {'class': 'custom-form'}}) }}
-    {{ form_widget(form, {'attr': {'class': 'custom-input'}}) }}
-
+    <h1>{{ 'title.tasklist_create'|trans }}</h1>
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
     <div class="centered-container">
         <input type="submit" value="{{ 'action.save'|trans }}" class="btn btn-primary"/>
     </div>
     <div class="centered-container">
-        <a class="create" href="{{ url('task_index') }}" title="{{ 'action.back_to_list'|trans }}">
+        <a class="create" href="{{ url('tasklist_index') }}" title="{{ 'action.back_to_list'|trans }}">
             {{ 'Powrót'|trans }}
         </a>
     </div>

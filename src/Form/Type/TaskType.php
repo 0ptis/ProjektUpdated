@@ -6,9 +6,8 @@
 
 namespace App\Form\Type;
 
-use App\Entity\Category;
-use App\Entity\Lista;
 use App\Entity\Task;
+use App\Entity\TaskList;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -52,24 +51,13 @@ class TaskType extends AbstractType
             ]
         );
         $builder->add(
-            'category',
+            'taskList',
             EntityType::class,
             [
-                'class' => Category::class,
-                'choice_label' => fn (Category $category): ?string => $category->getTitle(),
-                'label' => 'label.category',
-                'placeholder' => 'Kategoria',
-                'required' => true,
-            ]
-        );
-        $builder->add(
-            'lista',
-            EntityType::class,
-            [
-                'class' => Lista::class,
-                'choice_label' => fn (Lista $lista): ?string => $lista->getTitle(),
+                'class' => TaskList::class,
+                'choice_label' => fn (TaskList $taskList): ?string => $taskList->getTitle(),
                 'label' => 'label.lista',
-                'placeholder' => 'Lista',
+                'placeholder' => 'TaskList',
                 'required' => true,
             ]
         );

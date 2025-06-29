@@ -1,20 +1,20 @@
 <?php
 
 /**
- * TaskListInputFiltersDto resolver.
+ * NoteListInputFiltersDto resolver.
  */
 
 namespace App\Resolver;
 
-use App\Dto\TaskListInputFiltersDto;
+use App\Dto\NoteListInputFiltersDto;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Controller\ValueResolverInterface;
 use Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadata;
 
 /**
- * TaskListInputFiltersDtoResolver class.
+ * NoteListInputFiltersDtoResolver class.
  */
-class TaskListInputFiltersDtoResolver implements ValueResolverInterface
+class NoteListInputFiltersDtoResolver implements ValueResolverInterface
 {
     /**
      * Returns the possible value(s).
@@ -22,18 +22,18 @@ class TaskListInputFiltersDtoResolver implements ValueResolverInterface
      * @param Request          $request  HTTP Request
      * @param ArgumentMetadata $argument Argument metadata
      *
-     * @return iterable Iterable
+     * @return iterable<mixed> Iterable
      */
     public function resolve(Request $request, ArgumentMetadata $argument): iterable
     {
         $argumentType = $argument->getType();
 
-        if (!$argumentType || !is_a($argumentType, TaskListInputFiltersDto::class, true)) {
+        if (!$argumentType || !is_a($argumentType, NoteListInputFiltersDto::class, true)) {
             return [];
         }
 
-        $listaId = $request->query->get('listaId');
+        $categoryId = $request->query->get('categoryId');
 
-        return [new TaskListInputFiltersDto($listaId)];
+        return [new NoteListInputFiltersDto($categoryId)];
     }
 }

@@ -14,10 +14,9 @@ class TaskListInputFiltersDto
     /**
      * Constructor.
      *
-     * @param int|null $categoryId Category identifier
-     * @param int|null $listaId    Lista identifier
+     * @param int|null $listaId TaskList identifier
      */
-    public function __construct(public readonly ?int $categoryId = null, public readonly ?int $listaId = null)
+    public function __construct(public readonly ?int $listaId = null)
     {
     }
 }

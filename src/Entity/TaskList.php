@@ -1,23 +1,24 @@
 <?php
 
 /*
- * Entity Lista
+ * Entity TaskList
  */
 
 namespace App\Entity;
 
-use App\Repository\ListaRepository;
+use App\Repository\TaskListRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * Entity representing a Lista.
+ * Entity representing a TaskList.
  *
- * This class is used to manage the data associated with a Lista entity.
+ * This class is used to manage the data associated with a TaskList entity.
  * It includes properties for id, title, createdAt, and updatedAt fields,
  * along with their respective getters and setters.
  */
-#[ORM\Entity(repositoryClass: ListaRepository::class)]
-class Lista
+#[ORM\Entity(repositoryClass: TaskListRepository::class)]
+class TaskList
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -25,12 +26,17 @@ class Lista
     private ?int $id = null;
 
     #[ORM\Column(length: 64)]
+    #[Assert\NotBlank]
+    #[Assert\Type('string')]
+    #[Assert\Length(min: 3, max: 64)]
     private ?string $title = null;
 
     #[ORM\Column]
+    #[Assert\Type(\DateTimeImmutable::class)]
     private ?\DateTimeImmutable $createdAt = null;
 
     #[ORM\Column]
+    #[Assert\Type(\DateTimeImmutable::class)]
     private ?\DateTimeImmutable $updatedAt = null;
 
     /**
